@@ -1,0 +1,23 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: nodejs-ui-admin-ingress
+  annotations:
+    ingress.bluemix.net/rewrite-path: "serviceName=nodejs-ui-service rewrite=/ui-admin/"
+spec:
+  tls:
+  - hosts:
+    - kube-cluster-demo.us-south.containers.mybluemix.net
+    secretName: kube-cluster-bmw
+  rules:
+  - host: kube-cluster-demo.us-south.containers.mybluemix.net
+    http:
+      paths:
+      - path: /ui-admin/
+        backend:
+          serviceName: nodejs-ui-admin-service
+          servicePort: 3000
+      - path: /api-private/
+        backend:
+          serviceName: nodejs-api-private-service
+          servicePort: 3000
