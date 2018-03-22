@@ -3,7 +3,7 @@ This project is used to demonstrate how to read, write the YAML files and update
 
 
 ## How to start?
-```
+```sh
 go build
 ./yaml-golang-sample myconfigmap_template.yaml new_configmap.yaml
 
