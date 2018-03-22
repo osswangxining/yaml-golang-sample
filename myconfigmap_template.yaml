@@ -1,0 +1,33 @@
+kind: ConfigMap
+apiVersion: v1
+metadata:
+  name: my-configmap
+  namespace: default
+data:
+  cloudantDBName: topics
+  cloudantUserName: a6a5707d-6d2f-4019-85b4-9b25b46e3bfa
+  objectStorageEndPoint: https://s3-api.us-geo.objectstorage.softlayer.net
+  objectStorageIBMAuthEndPoint: https://iam.ng.bluemix.net/oidc/token
+  objectStorageServiceInstanceID: 'crn:v1:bluemix:public:cloud-object-storage:global:a/a01408f268850eaa98a667c38b0678db:34048824-3ab7-49b3-a5c1-bf0fea4ef6be::'
+  wdsEndPoint: watson-developer-cloud/discovery/v1
+  wdsEnvID: 2c424b87-3cb4-4ce9-94ec-ccf74cef5090
+  wdsURL: https://gateway.watsonplatform.net/discovery/api
+  wdsUserName: 2e033f95-ae45-419a-820-ac205c5a7fa6
+  wdsVersionDate: 2017-11-07
+  serviceNameAPIPrivate: nodejs-api-private-service
+  servicePortAPIPrivate: '3000'
+  servicePrctolAPIPrivate: http
+  appIDAdminTenantID: 8b7e3e89-ff95-4465-8b7d-878368146f68
+  appIDAdminClientID: ab702d3e-b93d-47d2-a1f0-959213c9cddc
+  appIDAdminOAuthServerURL: https://appid-oauth.ng.bluemix.net/oauth/v3/8b7e3e89-ff95-465-8b7d-878368146f68
+  appIDAdminRedirectURL: https://kube-cluster-demo-south.containers.mybluemix.net/ui-admin/login/callback
+  appIDUserTenantID: 8b7e3e89-ff95-4465-8b7d-878368146f68
+  appIDUserClientID: ab702d3e-b93d-47d2-a1f0-959213c9cddc
+  appIDUserOAuthServerURL: https://appid-oauth.ng.bluemix.net/oauth/v3/8b7e3e89-ff95-4465-8b7d-78368146f68
+  appIDUserRedirectURL: https://kube-cluster-demo-south.containers.mybluemix.net/ui-enduser/login/callback
+  apiPrivateContextPath: /api-private
+  apiPublicContextPath: /api-public
+  uiAdminContextPath: /ui-admin
+  uiEndUserContextPath: /ui-enduser
+  wdsCrawlerContextPath: /wds-crawler
+  jwtExpires: 12h
